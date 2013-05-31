@@ -10,9 +10,12 @@
 
 <div class="container">
   <header>
-    <h1 class="brand">
-      HAM<span class="muted">b</span>L<span class="muted">og</span>
-    </h1>
+    <%= link_to root_path do %>
+      <h1 class="brand">
+        HAM<span class="muted">b</span>L<span class="muted">og</span>
+      </h1>
+    <%- end -%>
+
     <span class="tagline">Your #1 Source for Crowdsourced Stories of Ham</span>
   </header>
 </div>

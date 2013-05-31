@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
 
     if @post.save
-      redirect_to posts_path, notice: "Post created successfully!"
+      redirect_to root_path, notice: "Post created successfully!"
     else
       flash[:error] = "You need to provide valid attributes!"
       render :new
