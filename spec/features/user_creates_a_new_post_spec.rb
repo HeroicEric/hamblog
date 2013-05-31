@@ -17,9 +17,7 @@ feature "user creates a new post", %q{
 
   scenario "user creates a post with valid attributes" do
     visit new_post_path
-    fill_in "Title", with: title
-    fill_in "Author", with: author
-    fill_in "Content", with: content
+    fill_in_form_with_valid_attributes
     click_on "Create Post"
     expect(page).to have_content "Post created successfully!"
   end
@@ -28,5 +26,11 @@ feature "user creates a new post", %q{
     visit new_post_path
     click_on "Create Post"
     expect(page).to have_content "You need to provide valid attributes!"
+  end
+
+  def fill_in_form_with_valid_attributes
+    fill_in "Title", with: title
+    fill_in "Author", with: author
+    fill_in "Content", with: content
   end
 end
