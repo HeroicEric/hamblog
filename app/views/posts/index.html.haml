@@ -1,0 +1,6 @@
+%h1 Posts Archive, Yo.
+= link_to "Add Post", new_post_path
+%ul.posts-list
+  - @posts.each do |post|
+    %li
+      = link_to post.title, post_path(post)
