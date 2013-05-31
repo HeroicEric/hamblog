@@ -16,14 +16,16 @@ feature "user creates a new post", %q{
   let(:author) { "Yoda" }
 
   scenario "user creates a post with valid attributes" do
-    visit new_post_path
+    visit root_path
+    click_on "Add Post"
     fill_in_form_with_valid_attributes
     click_on "Create Post"
     expect(page).to have_content "Post created successfully!"
   end
 
   scenario "user attempts to create a Post without valid attributes" do
-    visit new_post_path
+    visit root_path
+    click_on "Add Post"
     click_on "Create Post"
     expect(page).to have_content "You need to provide valid attributes!"
   end

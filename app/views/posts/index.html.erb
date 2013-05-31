@@ -1,5 +1,7 @@
 <h1>Posts Index, Yo.</h1>
 
+<%= link_to "Add Post", new_post_path %>
+
 <ul>
   <%- @posts.each do |post| -%>
     <li>
