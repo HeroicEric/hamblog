@@ -17,9 +17,14 @@ body {
   background-position: center top;
 
   font-size: $base-font-size;
+
 }
 
 a { color: limegreen; }
+
+ul {
+ list-style-image: url('bacon-icon.png'); 
+}
 
 .container {
   @include clearfix;
@@ -42,3 +47,4 @@ a { color: limegreen; }
 .posts-list {
   > li { font-size: $large-font-size; }
 }
+
