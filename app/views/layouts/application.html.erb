@@ -7,6 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <ul>
+    <%- flash.each do |type, message| -%>
+      <li>
+        <%= "#{type.upcase}: #{message}" %>
+      </li>
+    <%- end -%>
+  </ul>
 
 <%= yield %>
 

@@ -1,7 +1,7 @@
 Hamlog::Application.routes.draw do
   root to: 'posts#index'
 
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show, :new, :create, :update]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
