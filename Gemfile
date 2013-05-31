@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'simple_form'
 
 group :test, :development do
   gem 'rspec-rails'
