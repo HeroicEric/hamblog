@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %title Hamlog
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .container
+      %header
+        = link_to root_path do
+          %h1.brand
+            HAM
+            %span.muted> b
+            L
+            %span.muted og
+        %span.tagline Your #1 Source for Crowdsourced Stories of Ham
+    .container
+      .main
+        %ul
+          - flash.each do |type, message|
+            %li
+              = "#{type.upcase}: #{message}"
+        = yield
+    .container
+      %footer
+        %small Your #1 Source for Crowdsourced Stories of Ham
