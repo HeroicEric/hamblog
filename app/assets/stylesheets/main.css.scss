@@ -1,0 +1,39 @@
+// Thoughtbot's Bourbon Mixins
+@import "bourbon";
+
+$base-font-size: 1.2em;
+$large-font-size: 2em;
+
+$muted-gray: #ccc;
+
+$base-spacing-unit: 12px;
+$half-spacing-unit: 6px;
+$double-spacing-unit: 24px;
+
+body {
+  font-size: $base-font-size;
+}
+
+a { color: limegreen; }
+
+.container {
+  @include clearfix;
+  margin: 0 5%;
+}
+
+.brand {
+  float: left;
+}
+
+.muted {
+  color: $muted-gray;
+}
+
+.tagline {
+  float: right;
+  margin-top: $double-spacing-unit;
+}
+
+.posts-list {
+  > li { font-size: $large-font-size; }
+}

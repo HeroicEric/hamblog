@@ -7,15 +7,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <ul>
-    <%- flash.each do |type, message| -%>
-      <li>
-        <%= "#{type.upcase}: #{message}" %>
-      </li>
-    <%- end -%>
-  </ul>
 
-<%= yield %>
+<div class="container">
+  <header>
+    <h1 class="brand">
+      HAM<span class="muted">b</span>L<span class="muted">og</span>
+    </h1>
+    <span class="tagline">Your #1 Source for Crowdsourced Stories of Ham</span>
+  </header>
+</div>
+
+<div class="container">
+  <div class="main">
+    <ul>
+      <%- flash.each do |type, message| -%>
+        <li>
+          <%= "#{type.upcase}: #{message}" %>
+        </li>
+      <%- end -%>
+    </ul>
+
+    <%= yield %>
+  </div>
+</div>
+
+<div class="container">
+  <footer>
+    <small>Your #1 Source for Crowdsourced Stories of Ham</small>
+  </footer>
+</div>
 
 </body>
 </html>

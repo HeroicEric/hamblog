@@ -1,6 +1,6 @@
 <h1>Posts Index, Yo.</h1>
 
-<ul>
+<ul class="posts-list">
   <%- @posts.each do |post| -%>
     <li>
       <%= link_to post.title, post_path(post) %>
