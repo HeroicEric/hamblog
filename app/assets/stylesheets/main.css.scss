@@ -11,6 +11,11 @@ $half-spacing-unit: 6px;
 $double-spacing-unit: 24px;
 
 body {
+  background-image: image-url('huge-pig.jpg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center top;
+
   font-size: $base-font-size;
 }
 
@@ -18,7 +23,7 @@ a { color: limegreen; }
 
 .container {
   @include clearfix;
-  margin: 0 5%;
+  margin: 5%;
 }
 
 .brand {
