@@ -10,8 +10,8 @@ feature "user views post archive", %q{
   # - I see a list of post titles
   # - Each Post title links me to the page for that Post
 
-  let!(:post1) { FactoryGirl.create(:post) }
-  let!(:post2) { FactoryGirl.create(:post) }
+  let!(:post1) { FactoryGirl.create(:published_post) }
+  let!(:post2) { FactoryGirl.create(:published_post) }
 
   scenario "user sees all post titles" do
     visit root_path

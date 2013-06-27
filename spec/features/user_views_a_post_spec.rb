@@ -11,7 +11,7 @@ feature "user views a post page", %q{
   # - I can see the Post's
   # - I can see the content of the Post that I am viewing
 
-  let!(:post) { FactoryGirl.create(:post) }
+  let!(:post) { FactoryGirl.create(:published_post) }
 
   scenario "user views a Post from the archive" do
     visit root_path

@@ -23,6 +23,7 @@ end
 
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'state_machine'
 
 group :test, :development do
   gem 'rspec-rails'

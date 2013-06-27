@@ -1,7 +1,10 @@
 Hamlog::Application.routes.draw do
   root to: 'posts#index'
 
-  resources :posts, only: [:index, :show, :new, :create, :update]
+  resources :posts, only: [:index, :show, :new, :create, :update] do
+    # localhost:3000/posts/:post_id/publish
+    match "/publish" => "posts#publish"
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
